@@ -16,6 +16,13 @@ const connect = function() {
   console.log(message);
   });
 
+  conn.on('connect', function () {
+  console.log('Connection estabilished!');
+  const clientName = 'JÃO';
+  conn.write(`Name: ${clientName}`);
+  });
+  
+
   return conn;
 }
 
